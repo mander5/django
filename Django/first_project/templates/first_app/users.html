@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User page</title>
+  </head>
+  <body>
+    <div class="djangtwo">
+      {% if user_info %}
+      <ol>
+        {% for person in user_info %}
+        <li>User info</li>
+        <ul>
+          <li>First Name: {{ person.first_name }}</li>
+          <li>Last Name: {{ person.last_name }}</li>
+          <li>Email Name: {{ person.email }}</li>
+        </ul>
+      {% endfor %}
+      {% else %}
+      <p>NO ACCESS RECORDS FOUND</p>
+      </ol>
+      {% endif %}
+    </div>
+  </body>
+</html>
